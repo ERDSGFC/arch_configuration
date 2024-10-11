@@ -3,8 +3,8 @@
 USER_NAME="qin"
 USER_PASSWORD="asdfjj"
 #定义日志文件
-LOG_FILE="init.log"
-RECORD_LOG="> init.log 2>&1"
+LOG_FILE="/var/log/arch_init.log"
+RECORD_LOG="> /var/log/arch_init.log 2>&1"
 #定义打印函数
 printMsg(){
     if [ $1 -eq $2 ];then

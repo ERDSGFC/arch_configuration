@@ -1,7 +1,7 @@
 #!/bin/bash
 #定义日志文件
-LOG_FILE="init.log"
-RECORD_LOG="> init.log 2>&1"
+LOG_FILE="/var/log/arch_init.log"
+RECORD_LOG="> /var/log/arch_init.log 2>&1"
 #定义打印函数
 printMsg(){
     if [ $1 -eq $2 ];then
@@ -17,7 +17,12 @@ myEcho(){
 }
 #配置桌面
 mkdir -p $HOMER/.config/bspwm $HOME/.config/sxhkd $HOME/.config/alacritty $HOME/.config/polybar
-git clone https://github.com/ERDSGFC/arch_configuration.git
+cp ./arch_configuration/bspwm/bspwmrc $HOME/.config/bspwm
+cp ./arch_configuration/sxhkd/sxhkdrc $HOME/.config/sxhkd
+
+cp ./arch_configuration/polybar/config.ini $HOME/.config/polybar
+cp ./arch_configuration/.xinitrc $HOME/.xinitrc
+cp ./arch_configuration/.xinitrc $HOME/.xinitrc
 #cp /usr/share/doc/bspwm/examples/bspwmrc $HOME/.config/bspwm
 #cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd
 #cp /usr/share/doc/polybar/examples/config.ini $HOME/.config/polybar
