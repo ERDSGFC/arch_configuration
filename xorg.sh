@@ -17,6 +17,7 @@ myEcho(){
 }
 #配置桌面
 mkdir -p $HOMER/.config/bspwm $HOME/.config/sxhkd $HOME/.config/alacritty $HOME/.config/polybar
+echo pwd
 cp ./arch_configuration/bspwm/bspwmrc.default $HOME/.config/bspwm/bspwmrc
 cp ./arch_configuration/sxhkd/sxhkdrc/sxhkdrc.default $HOME/.config/sxhkd/sxhkdrc
 
