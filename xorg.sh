@@ -17,12 +17,12 @@ myEcho(){
 }
 #配置桌面
 mkdir -p $HOMER/.config/bspwm $HOME/.config/sxhkd $HOME/.config/alacritty $HOME/.config/polybar
-cp ./arch_configuration/bspwm/bspwmrc $HOME/.config/bspwm
-cp ./arch_configuration/sxhkd/sxhkdrc $HOME/.config/sxhkd
+cp ./arch_configuration/bspwm/bspwmrc.default $HOME/.config/bspwm/bspwmrc
+cp ./arch_configuration/sxhkd/sxhkdrc/sxhkdrc.default $HOME/.config/sxhkd/sxhkdrc
 
-cp ./arch_configuration/polybar/config.ini $HOME/.config/polybar
+cp ./arch_configuration/polybar/config.default $HOME/.config/polybar/config.ini
 cp ./arch_configuration/.xinitrc $HOME/.xinitrc
-cp ./arch_configuration/.xinitrc $HOME/.xinitrc
+cp ./arch_configuration/.xprofile $HOME/.xprofile
 #cp /usr/share/doc/bspwm/examples/bspwmrc $HOME/.config/bspwm
 #cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd
 #cp /usr/share/doc/polybar/examples/config.ini $HOME/.config/polybar
@@ -42,9 +42,6 @@ polybar mybar 2>&1 | tee -a /tmp/polybar.log & disown
 echo "Polybar launched..."
 EOF
 chomd +x $HOME/.config/polybar/launch.sh
-
-cat>~/.xprofile<<EOF
-EOF
 
 # We use Alacritty's default Linux config directory as our storage location here.
 mkdir -p ~/.config/alacritty/themes
