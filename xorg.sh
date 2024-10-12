@@ -19,7 +19,7 @@ myEcho(){
 mkdir -p $HOMER/.config/bspwm $HOME/.config/sxhkd $HOME/.config/alacritty $HOME/.config/polybar
 
 cp ./bspwm/bspwmrc.default $HOME/.config/bspwm/bspwmrc
-cp ./sxhkd/sxhkdrc/sxhkdrc.default $HOME/.config/sxhkd/sxhkdrc
+cp ./sxhkd/sxhkdrc.default $HOME/.config/sxhkd/sxhkdrc
 
 cp ./polybar/config.default $HOME/.config/polybar/config.ini
 cp ./.xinitrc $HOME/.xinitrc
