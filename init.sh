@@ -113,6 +113,7 @@ echo "[ ###########安装桌面环境########### ]" >> ${LOG_FILE} 2>&1
 pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd polybar nitrogen picom lightdm lightdm-webkit2-greeter alacritty chromium fcitx5-im fcitx5-chinese-addons fcitx5-material-color >> ${LOG_FILE} 2>&1
 # pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd polyber dmenu rofi nitrogen picom xfce4-terminal lightdm lightdm-webkit2-greeter alacritty chromium fcitx5-im fcitx5-chinese-addons fcitx5-material-color >> ${LOG_FILE} 2>&1
 #su ${USER_NAME} -c "${USER_PASSWORD}"
+LIGHT=`sed -i "" /opt/`
 chmod 777 xorg.sh
 #su ${USER_NAME} bash -c "source ./xorg.sh"
 su ${USER_NAME} -s /usr/bin/bash ./xorg.sh
