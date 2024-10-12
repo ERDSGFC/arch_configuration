@@ -16,7 +16,7 @@ myEcho(){
     echo -e "\033[32m[ ###########${3}########### ]\033[0m"
 }
 #配置桌面
-mkdir -p $HOMER/.config/bspwm $HOME/.config/sxhkd $HOME/.config/alacritty $HOME/.config/polybar
+mkdir -p $HOME/.config/bspwm $HOME/.config/sxhkd $HOME/.config/alacritty $HOME/.config/polybar
 
 cp ./bspwm/bspwmrc.default $HOME/.config/bspwm/bspwmrc
 cp ./sxhkd/sxhkdrc.default $HOME/.config/sxhkd/sxhkdrc
