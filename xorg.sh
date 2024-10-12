@@ -42,7 +42,7 @@ polybar mybar 2>&1 | tee -a /tmp/polybar.log & disown
 
 echo "Polybar launched..."
 EOF
-chomd +x $HOME/.config/polybar/launch.sh
+chmod +x $HOME/.config/polybar/launch.sh
 
 # We use Alacritty's default Linux config directory as our storage location here.
 mkdir -p ~/.config/alacritty/themes
