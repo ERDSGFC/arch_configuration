@@ -17,13 +17,13 @@ myEcho(){
 }
 #配置桌面
 mkdir -p $HOMER/.config/bspwm $HOME/.config/sxhkd $HOME/.config/alacritty $HOME/.config/polybar
-echo pwd
-cp ./arch_configuration/bspwm/bspwmrc.default $HOME/.config/bspwm/bspwmrc
-cp ./arch_configuration/sxhkd/sxhkdrc/sxhkdrc.default $HOME/.config/sxhkd/sxhkdrc
 
-cp ./arch_configuration/polybar/config.default $HOME/.config/polybar/config.ini
-cp ./arch_configuration/.xinitrc $HOME/.xinitrc
-cp ./arch_configuration/.xprofile $HOME/.xprofile
+cp ./bspwm/bspwmrc.default $HOME/.config/bspwm/bspwmrc
+cp ./sxhkd/sxhkdrc/sxhkdrc.default $HOME/.config/sxhkd/sxhkdrc
+
+cp ./polybar/config.default $HOME/.config/polybar/config.ini
+cp ./.xinitrc $HOME/.xinitrc
+cp ./.xprofile $HOME/.xprofile
 #cp /usr/share/doc/bspwm/examples/bspwmrc $HOME/.config/bspwm
 #cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd
 #cp /usr/share/doc/polybar/examples/config.ini $HOME/.config/polybar
