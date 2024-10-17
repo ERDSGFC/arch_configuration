@@ -66,6 +66,7 @@ then
 else
     echo -e "\033[33m[ ###########已经设置社区仓库########### ]\033[0m"
 fi
+pacman --noconfirm -Syyu
 yes | pacman -S archlinuxcn-keyring >> ${LOG_FILE} 2>&1
 pacman --noconfirm -S yay >> ${LOG_FILE} 2>&1
 #添加新用户qin
@@ -112,7 +113,7 @@ pacman -S --noconfirm noto-fonts-cjk >> ${LOG_FILE} 2>&1
 #安装桌面环境
 echo -e "\033[1m[ ###########安装桌面环境########### ]\033[0m"
 echo "[ ###########安装桌面环境########### ]" >> ${LOG_FILE} 2>&1
-pacman -S --noconfirm xorg-server xorg-xinit bspwm sxhkd polybar nitrogen feh picom xfce4-terminal lightdm lightdm-webkit2-greeter alacritty chromium fcitx5-im fcitx5-chinese-addons fcitx5-material-color >> ${LOG_FILE} 2>&1
+pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd polybar nitrogen feh picom xfce4-terminal lightdm lightdm-webkit2-greeter alacritty chromium fcitx5-im fcitx5-chinese-addons fcitx5-material-color >> ${LOG_FILE} 2>&1
 # pacman -S --noconfirm xorg xorg-xinit bspwm sxhkd polyber dmenu rofi nitrogen picom xfce4-terminal lightdm lightdm-webkit2-greeter alacritty chromium fcitx5-im fcitx5-chinese-addons fcitx5-material-color >> ${LOG_FILE} 2>&1
 #su ${USER_NAME} -c "${USER_PASSWORD}"
 # 虚拟机使用picom 需要改变此配置文件
@@ -123,5 +124,6 @@ fi
 echo -e "\033[1m[ ###########初始化配置文件########### ]\033[0m"
 chmod 777 xorg.sh
 #su ${USER_NAME} bash -c "source ./xorg.sh"
-su ${USER_NAME} -s /usr/bin/bash ./xorg.sh
+# su ${USER_NAME} -s /usr/bin/bash ./xorg.sh
+bash ./xorg.sh
 
