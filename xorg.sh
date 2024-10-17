@@ -17,7 +17,7 @@ myEcho(){
 }
 # 设置壁纸
 mkdir $HOME/wallpaper
-cp ./.wallpaper.png $HOME/wallpaper/wallpaper.png
+cp ./wallpaper.png $HOME/wallpaper/wallpaper.png
 nitrogen --set-zoom-fill $HOME/wallpaper/wallpaper.png
 
 #配置桌面

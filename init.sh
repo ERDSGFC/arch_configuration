@@ -118,6 +118,7 @@ if [[ "none" != `systemd-detect-virt` ]]
 then
     sed -i 's/^vsync = true/# vsync =true/' /etc/xdg/picom.conf
 fi
+echo -e "\033[1m[ ###########初始化配置文件########### ]\033[0m"
 chmod 777 xorg.sh
 #su ${USER_NAME} bash -c "source ./xorg.sh"
 su ${USER_NAME} -s /usr/bin/bash ./xorg.sh
