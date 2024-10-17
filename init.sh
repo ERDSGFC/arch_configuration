@@ -60,12 +60,10 @@ ArchLinuxCn=`sed -n '/\[archlinuxcn\]/p' /etc/pacman.conf`
 if [[ -z $ArchLinuxCn ]]
 then
     sed -i '$,/#Server/a[archlinuxcn]\nServer = https://mirrors.cqu.edu.cn/archlinuxcn/$arch' /etc/pacman.conf
-    pacman --noconfirm -Syu archlinuxcn-keyring yay >> ${LOG_FILE} 2>&1
-    printMsg $? 0 设置社区仓库成功 设置社区仓库失败
 else
     echo -e "\033[33m[ ###########已经设置社区仓库########### ]\033[0m"
 fi
-
+yes | pacman --noconfirm :-Syu archlinuxcn-keyring yay >> ${LOG_FILE} 2>&1
 #添加新用户qin
 echo -e "\033[1m[ ###########添加新用户${USER_NAME}########### ]\033[0m"
 echo "[ ###########添加新用户${USER_NAME}########### ]" >> ${LOG_FILE} 2>&1
