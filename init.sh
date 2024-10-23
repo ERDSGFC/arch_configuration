@@ -66,9 +66,13 @@ then
 else
     echo -e "\033[33m[ ###########已经设置社区仓库########### ]\033[0m"
 fi
-pacman --noconfirm -Syyu
-yes | pacman -S archlinuxcn-keyring >> ${LOG_FILE} 2>&1
-pacman --noconfirm -S yay >> ${LOG_FILE} 2>&1
+pacman --noconfirm -Syyu >> ${LOG_FILE} 2>&1
+if [[ -z `pacman -Q | grep yay` ]]
+then
+    yes | pacman -S archlinuxcn-keyring >> ${LOG_FILE} 2>&1
+    pacman --noconfirm -S yay >> ${LOG_FILE} 2>&1
+fi
+
 #添加新用户qin
 echo -e "\033[1m[ ###########添加新用户${USER_NAME}########### ]\033[0m"
 echo "[ ###########添加新用户${USER_NAME}########### ]" >> ${LOG_FILE} 2>&1
@@ -125,5 +129,5 @@ echo -e "\033[1m[ ###########初始化配置文件########### ]\033[0m"
 chmod 777 xorg.sh
 #su ${USER_NAME} bash -c "source ./xorg.sh"
 # su ${USER_NAME} -s /usr/bin/bash ./xorg.sh
-bash ./xorg.sh
+# bash ./xorg.sh
 
